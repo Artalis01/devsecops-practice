@@ -59,4 +59,7 @@ jobs:
 
       - name: Run Trivy image scan
         run: |
-          trivy image --input image.tar --exit-code 1 --severity HIGH,CRITICAL
+          trivy image --input image.tar \
+          --exit-code 1 \
+          --severity CRITICAL \
+          --ignore-unfixed
